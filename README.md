@@ -11,8 +11,16 @@ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)
 ```
 ```
 sudo apt-get update
-sudo apt-get install postgresql postgresql-contrib
+sudo apt install postgresql postgresql-client
 ```
+sudo systemctl stop postgresql.service
+sudo systemctl start postgresql.service
+sudo systemctl enable postgresql.service
+```
+```
+sudo systemctl status postgresql.service
+```
+
 ## connect to database
 ### logging to the postgres account
 ```
